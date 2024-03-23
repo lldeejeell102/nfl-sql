@@ -60,17 +60,47 @@
 
 -- 9. The player with the highest salary in the NFL
 
+-- Show all columns from players table, order by salary column in descending order and only show 1 row.
+-- SELECT * FROM
+--   players
+-- ORDER BY salary DESC
+-- LIMIT 1
 
 -- 10. The name and position of the first 100 players with the lowest salaries
 
+-- Show name, position and salary columns from the players table. Show in ascending order by salary and only show 100 rows.
+-- SELECT name, position, salary FROM
+--   players
+-- ORDER BY salary ASC
+-- LIMIT 100
 
 -- 11. The average salary for a DE in the nfl
 
+-- Show average salary from the players table where the position is DE.
+-- SELECT AVG(salary) FROM
+--   players
+-- WHERE position = 'DE'
 
 -- 12. The names of all the players on the Buffalo Bills
 
+-- Show players name and teams name by joining players and teams tables by players.team_id and teams.id. Where the team name is Buffalo Bills.
+-- SELECT players.name, teams.name FROM players 
+-- FULL JOIN teams ON players.team_id = teams.id
+-- WHERE teams.name = 'Buffalo Bills'
+-- ORDER BY players.name ASC
 
 -- 13. The total salary of all players on the New York Giants
 
+-- Sum all players salary after joining players and teams table by players.team_id and teams.id. Where the team name is New York Giants
+-- SELECT SUM(players.salary) FROM players 
+-- FULL JOIN teams ON players.team_id = teams.id
+-- WHERE teams.name = 'New York Giants'
 
 -- 14. The player with the lowest salary on the Green Bay Packers
+
+-- Show name and salary from the players table after joining the players and teams table by players.team_id and teams.id. Where the team name is Green Bay Packers. Sort it by ascending order of salary. And only return 1 row.
+-- SELECT players.name, players.salary FROM players 
+-- FULL JOIN teams ON players.team_id = teams.id
+-- WHERE teams.name = 'Green Bay Packers'
+-- ORDER BY players.salary ASC
+-- LIMIT 1
