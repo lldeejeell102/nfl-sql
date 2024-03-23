@@ -31,7 +31,7 @@
 -- 5. The team names and head coaches of the NFC North and AFC East
 
 -- Show all team name and head coach name of teams in the NFC conference and North division and AFC conference and East division.
--- SELECT name, head_coach from
+-- SELECT name, head_coach FROM
 --   teams
 -- WHERE conference = 'NFC' AND division = 'North'
 -- OR conference = 'AFC' AND division = 'East'
@@ -39,16 +39,24 @@
 -- 6. The 50 players with the highest salaries
 
 -- Show name and salary columns from players table. Show in descending order of salary and limit to 50.
--- SELECT name, salary from
+-- SELECT name, salary FROM
 --   players
 -- ORDER BY salary DESC
 -- LIMIT 50
 
 -- 7. The average salary of all NFL players
 
+-- Calculate the average salary from players table.
+-- SELECT AVG(salary) FROM
+--   players
 
 -- 8. The names and positions of players with a salary above 10_000_000
 
+-- Show name, position, and salary columns from the players table. Where the salary is greater than 10,000,000 and order it by salary in decensing order.
+-- SELECT name, position, salary FROM
+--   players
+-- WHERE salary > 10000000
+-- ORDER BY salary DESC
 
 -- 9. The player with the highest salary in the NFL
 
